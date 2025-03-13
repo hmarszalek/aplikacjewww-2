@@ -1,0 +1,168 @@
+// Variables
+$bg-color: #f0f0f0;
+$text-color: #333;
+$link-color: #007bff;
+
+// Mixins
+@mixin center-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Media query mixin for responsive styling
+@mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+// SCSS styles
+body {
+    font-family: Arial, sans-serif;
+    background-color: $bg-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: lighten($bg-color, 5%);
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+article {
+    background-color: $bg-color;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+}
+
+form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: lighten($bg-color, 10%);
+    border-radius: 8px;
+    max-width: 400px;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    select {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    button {
+        background-color: $link-color;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+}
+
+footer {
+    background-color: darken($bg-color, 2%);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+// Specific styling for responsive tasks
+header, article, form {
+    @include responsive(800px) {
+        display: none;
+    }
+}
+
+footer {
+    @include responsive(800px) {
+        position: static;
+    }
+}
+
+// Hover effect and order change based on cursor and screen width
+header {
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten($bg-color, 15%);
+    }
+
+    @include responsive(800px) {
+        order: 1;
+    }
+}
+
+article {
+    @include responsive(800px) {
+        order: 2;
+    }
+}
+
+form {
+    @include responsive(800px) {
+        order: 3;
+    }
+}
+
+// Flexbox alignment options
+section {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        width: 30%;
+        background: $bg-color;
+        padding: 20px;
+        margin: 10px;
+
+        &:hover {
+            background-color: lighten($bg-color, 5%);
+        }
+
+        @include responsive(800px) {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+
+    .left {
+        justify-content: flex-start;
+    }
+
+    .right {
+        justify-content: flex-end;
+    }
+
+    .center {
+        @include center-flex-container;
+    }
+
+    .even {
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="styles.css">
+        <title>Strona HTML</title>
+    </head>
+    <body>
+        <header>
+            <h1>Najlepsze filmy wszechczasów</h1>
+            <h2>Edukacja filmowa dla każdego</h2>
+        </header>
+
+        <img src="https://images.bauerhosting.com/empire/2022/01/EMPIRE-100-Greatest-Movies-List.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80" alt="Przykładowy obrazek" width="500" />
+
+        <article>
+            <h2>Artykuł</h2>
+            <p>
+                Kino i filmografia są <strong>super</strong>.
+            </p>
+            <p>
+                Filmy na tej stronie są <em>powszechnie</em> (względem opinii publicznej) uważane za najlepsze.
+            </p>
+        </article>
+
+        <h2>Tabela dla trzech najlepszych filmów</h2>
+        <table border="1">
+            <caption>
+                Najlepsze filmy
+            </caption>
+            <tr>
+                <th>Tytuł</th>
+                <th>Reżyser</th>
+                <th>Rok Premiery</th>
+            </tr>
+            <tr>
+                <td>The Lord Of The Rings: The Fellowship Of The Ring</td>
+                <td>Peter Jackson</td>
+                <td>2001</td>
+            </tr>
+            <tr>
+                <td>Star Wars: The Empire Etrikes Back</td>
+                <td>Irvin Kershner</td>
+                <td>1980</td>
+            </tr>
+            <tr>
+                <td>The Godfather</td>
+                <td>Francis Ford Coppola</td>
+                <td>1972</td>
+            </tr>
+        </table>
+
+        
+        <h2>Najlepszych 25 filmów w kolejności chronologicznej</h2>
+        <ol type="I">
+            <li>A space odyssey.markdown</li>
+            <li>The godfather</li>
+            <li>The godfather part ii</li>
+            <li>Jaws</li>
+            <li>Star wars</li>
+            <li>Alien</li>
+            <li>Star wars the empire strikes back</li>
+            <li>Raiders of the lost ark</li>
+            <li>Blade runner</li>
+            <li>Back to the future</li>
+            <li>Aliens</li>
+            <li>Goodfellas</li>
+            <li>Terminator 2 judgment day</li>
+            <li>Jurassic park</li>
+            <li>Pulp fiction</li>
+            <li>The shawshank redemption</li>
+            <li>The matrix</li>
+            <li>Fight club</li>
+            <li>The lord of the rings the fellowship of the ring</li>
+            <li>The dark knight</li>
+            <li>Inception</li>
+            <li>Mad max fury road</li>
+            <li>Avengers infinity war</li>
+            <li>Avengers endgame</li>
+            <li>Parasite</li>
+        </ol>
+
+        <h2>Twój ulubiony gatunek</h2>
+        <form>
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" /><br /><br />
+
+            <label for="options">Wybór:</label>
+            <select id="options" name="options">
+                <optgroup label="Nie z tej ziemi">
+                    <option value="1">Fantastyka</option>
+                    <option value="2">Sci-fi</option>
+                </optgroup>
+                <optgroup label="Trochę strachu">
+                    <option value="3">Horror</option>
+                    <option value="4">Thriller</option>
+                </optgroup></select
+            ><br /><br />
+
+            <button type="submit">Wyślij</button>
+        </form>
+
+        <h2>Mój ulubiony film</h2>
+        <details>
+            <summary>Kliknij, aby poznać sekret</summary>
+            <p>Moim <strong>ulubionym</strong> filmem jest <em>Fight Club</em> reżyseri Davida Finchera.</p>
+        </details>
+
+        <h2>Pasek postępu</h2>
+        <p>Obecnie obejrzałam już tyle z powyższych filmów.</p>
+        <progress value="19" max="25"></progress>
+
+        <h2>Mapa obrazkowa</h2>
+        <img src="https://k20.targeo.pl/i/cache/static/punktsat2/szkola/wydzial-matematyki-informatyki-i-mechaniki-uniwersytetu-warszawskiego~5250436.jpg" usemap="#mapa" alt="Mapa" />
+        <map name="mapa">
+            <area shape="rect" coords="425,50,550,475" href="" alt="MIM" />
+            <area shape="rect" coords="600,0,800,500" href="" alt="FUW" />
+            <area shape="rect" coords="825,325,1100,575" href="" alt="Hala Sportowa" />
+            <!-- <area shape="circle" coords="150,150,50" href="#" alt="Obszar 2" /> -->
+            <!-- <area
+                shape="poly"
+                coords="200,200,250,250,200,300"
+                href="#"
+                alt="Obszar 3"
+            /> -->
+        </map>
+
+        <footer>
+            <p>&copy; 2025 Moja Strona na projekcik AWWW</p>
+        </footer>
+    </body>
+</html>
