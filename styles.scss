@@ -3,12 +3,12 @@ $bg-color: #f0f0f0;
 $text-color: #333;
 $link-color: #007bff;
 
-// Mixins
-@mixin center-flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// // Mixins
+// @mixin center-flex-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 // Media query mixin for responsive styling
 @mixin responsive($breakpoint) {
@@ -73,7 +73,7 @@ form {
     }
 
     button {
-        background-color: $link-color;
+        background-color: #54a64f;
         color: white;
         border: none;
         padding: 10px 20px;
